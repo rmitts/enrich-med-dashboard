@@ -1,3 +1,5 @@
+"use client"
+
 import { PlaceholderPage } from "@/components/placeholder-page"
 import { Scissors } from "lucide-react"
 

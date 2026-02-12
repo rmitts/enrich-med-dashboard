@@ -1,3 +1,5 @@
+"use client"
+
 import { PlaceholderPage } from "@/components/placeholder-page"
 import { CircleDot } from "lucide-react"
 

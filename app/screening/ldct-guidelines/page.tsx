@@ -1,3 +1,5 @@
+"use client"
+
 import { PlaceholderPage } from "@/components/placeholder-page"
 import { Scan } from "lucide-react"
 
