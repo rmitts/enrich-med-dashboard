@@ -2,6 +2,27 @@
 
 All notable changes to the Enrich Med Dashboard.
 
+## [0.2.0] - 2026-02-12
+
+### Documentation System
+- **Single Source of Truth**: Markdown files in repo root automatically render in dashboard
+- **New Documentation Section** in sidebar footer with:
+  - How to Use (`/documentation` → HOW-TO-USE.md)
+  - PROJECT-CONTEXT (`/documentation/project-context` → PROJECT-CONTEXT.md)
+  - AGENTS (`/documentation/agents` → AGENTS.md)
+  - CHANGELOG (`/documentation/changelog` → CHANGELOG.md)
+  - PROMPTS (`/documentation/prompts` → PROMPTS.md)
+- **Markdown Renderer Component**: Custom styling with design tokens, GFM support
+- **PROMPTS.md**: AI starter prompts library for quick session onboarding
+- **HOW-TO-USE.md**: Documentation system guide and AI context instructions
+
+### Technical
+- Installed `react-markdown` and `remark-gfm` for markdown rendering
+- Created `MarkdownDocPage` component for consistent doc page layout
+- Routes match file names for consistency (e.g., `/documentation/agents` → `AGENTS.md`)
+
+---
+
 ## [0.1.0] - 2026-02-12
 
 ### Initial Setup
@@ -57,8 +78,17 @@ All notable changes to the Enrich Med Dashboard.
 
 ## Session Notes
 
-### 2026-02-12 - Initial Setup Session
+### 2026-02-12 - Initial Setup & Documentation System
 **With**: Warp AI (Claude)
+**Duration**: ~2 hours
+
+**What Was Built**:
+1. **Project scaffolding** from v0 bloodwork dashboard template
+2. **Full sidebar navigation** for 6 course sections + 25 sub-pages
+3. **Course welcome page** with learning objectives and module cards
+4. **Documentation system** with markdown → dashboard rendering
+5. **Prompts library** for AI session onboarding
+6. **GitHub repo** + **Vercel deployment**
 
 **Context Provided**:
 - v0 bloodwork dashboard as template
@@ -67,11 +97,20 @@ All notable changes to the Enrich Med Dashboard.
 
 **Decisions Made**:
 1. Clone v0 template rather than start fresh (faster)
-2. Keep design system in sidebar footer (separate from content)
+2. Keep Design System in sidebar footer (separate from content)
 3. Use collapsible navigation for course sections
-4. Structure matches markdown content sections
+4. Single source of truth: .md files render directly in dashboard
+5. Route names match file names for consistency
+6. Added PROMPTS.md for reusable AI starter prompts
 
 **User Preferences Noted**:
 - Design System should be in lower-left, not main nav
-- Single source of truth for documentation (md files → dashboard)
+- Single source of truth for documentation
 - Prefers detailed technical solutions
+- Wants prompts library for AI session management
+
+**Next Steps**:
+1. Populate content pages from source markdown
+2. Add clinical tables (Lung-RADS, Fleischner guidelines)
+3. Implement risk stratification components
+4. Customize theme colors if desired

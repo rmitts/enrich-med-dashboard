@@ -10,6 +10,7 @@ import {
   ClipboardList,
   FileText,
   History,
+  MessageSquareText,
   Palette,
   Scan,
   Scissors,
@@ -245,6 +246,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                       <Link href="/documentation/changelog">
                         <History className="size-3 mr-1" />
                         CHANGELOG
+                      </Link>
+                    </SidebarMenuSubButton>
+                  </SidebarMenuSubItem>
+                  <SidebarMenuSubItem>
+                    <SidebarMenuSubButton asChild>
+                      <Link href="/documentation/prompts">
+                        <MessageSquareText className="size-3 mr-1" />
+                        PROMPTS
                       </Link>
                     </SidebarMenuSubButton>
                   </SidebarMenuSubItem>

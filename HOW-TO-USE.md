@@ -36,8 +36,11 @@ Read the following files for project context:
 | `PROJECT-CONTEXT.md` | Project overview, architecture, tech stack | `/documentation/project-context` |
 | `AGENTS.md` | AI development guidelines, code patterns | `/documentation/agents` |
 | `CHANGELOG.md` | Version history, session notes | `/documentation/changelog` |
+| `PROMPTS.md` | AI starter prompts library | `/documentation/prompts` |
 | `HOW-TO-USE.md` | This guide | `/documentation` |
 | `DESIGN-SYSTEM.md` | Full design system reference | `/design-system/guides` |
+
+> **Tip**: See [PROMPTS](/documentation/prompts) for copy-paste starter prompts for common tasks.
 
 ## Live URLs
 
