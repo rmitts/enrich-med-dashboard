@@ -4,10 +4,13 @@ import * as React from "react"
 import Link from "next/link"
 import {
   BookOpen,
+  Bot,
   ChevronRight,
   CircleDot,
   ClipboardList,
   FileText,
+  FolderOpen,
+  History,
   Palette,
   Scan,
   Scissors,
@@ -204,6 +207,42 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <SidebarMenuSubItem>
                     <SidebarMenuSubButton asChild>
                       <Link href="/design-system/guides">Guides & Presets</Link>
+                    </SidebarMenuSubButton>
+                  </SidebarMenuSubItem>
+                </SidebarMenuSub>
+              </CollapsibleContent>
+            </SidebarMenuItem>
+          </Collapsible>
+          <Collapsible>
+            <SidebarMenuItem>
+              <CollapsibleTrigger asChild>
+                <SidebarMenuButton>
+                  <FolderOpen className="size-4" />
+                  <span>Project</span>
+                  <ChevronRight className="ml-auto size-4 transition-transform group-data-[state=open]/collapsible:rotate-90" />
+                </SidebarMenuButton>
+              </CollapsibleTrigger>
+              <CollapsibleContent>
+                <SidebarMenuSub>
+                  <SidebarMenuSubItem>
+                    <SidebarMenuSubButton asChild>
+                      <Link href="/settings/project">Context</Link>
+                    </SidebarMenuSubButton>
+                  </SidebarMenuSubItem>
+                  <SidebarMenuSubItem>
+                    <SidebarMenuSubButton asChild>
+                      <Link href="/settings/project/ai-guidelines">
+                        <Bot className="size-3 mr-1" />
+                        AI Guidelines
+                      </Link>
+                    </SidebarMenuSubButton>
+                  </SidebarMenuSubItem>
+                  <SidebarMenuSubItem>
+                    <SidebarMenuSubButton asChild>
+                      <Link href="/settings/project/changelog">
+                        <History className="size-3 mr-1" />
+                        Changelog
+                      </Link>
                     </SidebarMenuSubButton>
                   </SidebarMenuSubItem>
                 </SidebarMenuSub>
