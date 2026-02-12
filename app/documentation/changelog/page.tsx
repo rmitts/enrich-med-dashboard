@@ -2,19 +2,19 @@ import { promises as fs } from "fs"
 import path from "path"
 import { MarkdownDocPage } from "@/components/markdown-doc-page"
 
-export default async function ProjectContextPage() {
-  const filePath = path.join(process.cwd(), "PROJECT-CONTEXT.md")
+export default async function ChangelogPage() {
+  const filePath = path.join(process.cwd(), "CHANGELOG.md")
   const content = await fs.readFile(filePath, "utf-8")
   const stats = await fs.stat(filePath)
 
   return (
     <MarkdownDocPage
-      title="Project Context"
+      title="CHANGELOG"
       content={content}
       breadcrumbs={[
         { label: "Home", href: "/" },
-        { label: "Settings", href: "/settings" },
-        { label: "Project Context" },
+        { label: "Documentation", href: "/documentation" },
+        { label: "CHANGELOG" },
       ]}
       lastUpdated={stats.mtime.toLocaleDateString()}
     />

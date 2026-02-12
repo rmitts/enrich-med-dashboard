@@ -9,14 +9,12 @@ import {
   CircleDot,
   ClipboardList,
   FileText,
-  FolderOpen,
   History,
   Palette,
   Scan,
   Scissors,
   Settings,
   Stethoscope,
-  Target,
   Activity,
   GraduationCap,
 } from "lucide-react"
@@ -217,8 +215,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenuItem>
               <CollapsibleTrigger asChild>
                 <SidebarMenuButton>
-                  <FolderOpen className="size-4" />
-                  <span>Project</span>
+                  <FileText className="size-4" />
+                  <span>Documentation</span>
                   <ChevronRight className="ml-auto size-4 transition-transform group-data-[state=open]/collapsible:rotate-90" />
                 </SidebarMenuButton>
               </CollapsibleTrigger>
@@ -226,22 +224,27 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 <SidebarMenuSub>
                   <SidebarMenuSubItem>
                     <SidebarMenuSubButton asChild>
-                      <Link href="/settings/project">Context</Link>
+                      <Link href="/documentation">How to Use</Link>
                     </SidebarMenuSubButton>
                   </SidebarMenuSubItem>
                   <SidebarMenuSubItem>
                     <SidebarMenuSubButton asChild>
-                      <Link href="/settings/project/ai-guidelines">
+                      <Link href="/documentation/project-context">PROJECT-CONTEXT</Link>
+                    </SidebarMenuSubButton>
+                  </SidebarMenuSubItem>
+                  <SidebarMenuSubItem>
+                    <SidebarMenuSubButton asChild>
+                      <Link href="/documentation/agents">
                         <Bot className="size-3 mr-1" />
-                        AI Guidelines
+                        AGENTS
                       </Link>
                     </SidebarMenuSubButton>
                   </SidebarMenuSubItem>
                   <SidebarMenuSubItem>
                     <SidebarMenuSubButton asChild>
-                      <Link href="/settings/project/changelog">
+                      <Link href="/documentation/changelog">
                         <History className="size-3 mr-1" />
-                        Changelog
+                        CHANGELOG
                       </Link>
                     </SidebarMenuSubButton>
                   </SidebarMenuSubItem>
